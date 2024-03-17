@@ -38,5 +38,9 @@ def sub():
 
 if __name__ == '__main__':
     app.run(debug=True)
+jinja2.exceptions.UndefinedError: 'video0' is undefined
+
+
+where is error
 
 # https://www.1024tera.com/sharing/link?surl=g8JFl_MqxwB4UlHhujtrfQ https://teraboxapp.com/s/1V8WLeu65eiiFNvri6HujEQ
