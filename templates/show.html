@@ -1,3 +1,25 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Video Files</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Downloaded Video Files</h1>-->
+<!--    <ul>-->
+<!--        {% for video_file in vid %}-->
+<!--            <li>{{ video_file }}</li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,11 +32,10 @@
 <body>
     <h1>Video</h1>
     {% for item in vid %}
-        <p>{{ item }}</p>
+        <video controls width="640" height="360">
+            <source src="{{ item }}" type="video/mp4">
+        </video>
     {% endfor %}
-<!--    <video controls width="640" height="360">-->
-<!--        <source src="{{static/video0.mp4}}" type="video/mp4">-->
-<!--    </video>-->
 </body>
 
 </html>
