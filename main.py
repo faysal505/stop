@@ -17,7 +17,9 @@ def index():
 def sub():
     if request.method == 'POST':
         text = request.form['link']
-        links = text.split(" ")
+        pattern = r"https://teraboxapp\.com/s/[^\s]+"
+        links = re.findall(pattern, text)
+        # links = text.split(" ")
         print(links)
         names = []
         for index, link in enumerate(links):
@@ -38,9 +40,6 @@ def sub():
 
 if __name__ == '__main__':
     app.run(debug=True)
-jinja2.exceptions.UndefinedError: 'video0' is undefined
 
-
-where is error
 
 # https://www.1024tera.com/sharing/link?surl=g8JFl_MqxwB4UlHhujtrfQ https://teraboxapp.com/s/1V8WLeu65eiiFNvri6HujEQ
